@@ -9,14 +9,15 @@
 
 void binary_tree_delete(binary_tree_t *tree)
 {
+    binary_tree_t *current;
+    binary_tree_t *next;
+
     if (tree == NULL)
     {
         return;
     }
 
-    binary_tree_t *current = tree;
-    binary_tree_t *next;
-    
+    current = tree;
     while (current != NULL)
     {
         if (current->left != NULL)
