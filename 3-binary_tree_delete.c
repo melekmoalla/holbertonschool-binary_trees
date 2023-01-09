@@ -23,12 +23,12 @@ void binary_tree_delete(binary_tree_t *tree)
         if (current->left != NULL)
         {
             next = current->left;
-            current->left = NULL;
+            free(current->left);
         }
         else if (current->right != NULL)
         {
             next = current->right;
-            current->right = NULL;
+            free(current->right);
         }
         else
         {
