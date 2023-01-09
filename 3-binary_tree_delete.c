@@ -1,40 +1,17 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_insert_left - function that inserts a node as the left-child
- * @parent:  is a pointer to the parent node of the node to create
- * @value:is the value to put in the new node
- * Return: new_node or NULL if failure.
+ * binary_tree_delete -  function that deletes an entire binary tree
+ * @tree:  s a pointer to the root node of the tree to delete
  */
 
 void binary_tree_delete(binary_tree_t *tree)
 {
-    binary_tree_t *current;
-    binary_tree_t *next;
-
-    if (tree == NULL)
-    {
-        return;
-    }
-
-    current = tree;
-    while (current != NULL)
-    {
-        if (current->left != NULL)
-        {
-            next = current->left;
-            free(current->left);
-        }
-        else if (current->right != NULL)
-        {
-            next = current->right;
-            free(current->right);
-        }
-        else
-        {
-            next = NULL;
-        }
-        free(current);
-        current = next;
-    }
+	if (tree == NULL)
+	{
+		return;
+	}
+	binary_tree_delete(tree->left);
+	binary_tree_delete(tree->right);
+	free(tree);
 }
