@@ -47,5 +47,5 @@ int binary_tree_balance(const binary_tree_t *tree)
 	{
 		return (a - b - 1);
 	}
-	return (a - b);
+	return (a - b + 1);
 }
