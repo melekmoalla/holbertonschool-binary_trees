@@ -50,7 +50,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	}
 	if (!tree && a != 0)
 	{
-		return (1);
+		return (0);
 	}
 
 	a = 1;
