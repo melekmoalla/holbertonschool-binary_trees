@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int a = 0;
+
 /**
  * struct binary_tree_s - Binary tree node
  *
