@@ -13,6 +13,10 @@ binary_tree_t
 {
 	if (first == NULL || second == NULL)
 		return (NULL);
+		
+	binary_tree_t *tree = first->parent;
+	binary_tree_t *tree1;
+
 	if (first->parent != second->parent)
 	{
 		if (first->parent == second)
@@ -56,8 +60,7 @@ binary_tree_t
 				return (first->right->parent);
 		}
 	}
-	binary_tree_t *tree = first->parent;
-	binary_tree_t *tree1;
+
 	while (tree)
 	{
 		tree1 = tree;
