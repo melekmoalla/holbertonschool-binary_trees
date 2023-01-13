@@ -20,9 +20,8 @@ binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree)
 	}
 	else
 	{
-		tree->left = NULL;
 		tree->left = ne->right;
-		ne->right = NULL;
+		tree->left->parent = tree;
 		ne->right = tree;
 	}
 	tree->parent = ne;
