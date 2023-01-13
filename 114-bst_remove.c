@@ -41,13 +41,12 @@ bst_t *bst_remove(bst_t *root, int value)
 			return (temp);
 		}
 
-
 		while (current->left != NULL)
 		{
 			current = current->left;
 		}
-
 		root->n = current->n;
+		root->right = bst_remove(root->right, current->n);
 	}
 	return (root);
 }
